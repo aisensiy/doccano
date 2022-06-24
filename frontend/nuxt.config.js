@@ -3,6 +3,7 @@ import i18n from './i18n'
 
 export default {
   ssr: false,
+  router: { base: './' },
   /*
    ** Headers of the page
    */
@@ -26,7 +27,7 @@ export default {
   },
 
   env: {
-    baseUrl: '/v1'
+    baseUrl: './v1'
   },
 
   /*

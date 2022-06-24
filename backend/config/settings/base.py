@@ -19,6 +19,7 @@ from furl import furl
 # Build paths inside the project like this: path.join(BASE_DIR, ...)
 BASE_DIR = path.dirname(path.dirname(path.dirname(path.abspath(__file__))))
 
+
 env = Env()
 env.read_env(path.join(BASE_DIR, ".env"), recurse=False)
 
@@ -101,9 +102,10 @@ TEMPLATES = [
     },
 ]
 
+# FORCE_SCRIPT_NAME = "/doccano"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATIC_URL = "/static/"
+STATIC_URL = "/doccano/static/"
 STATIC_ROOT = path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
     path.join(BASE_DIR, "client/dist/static"),

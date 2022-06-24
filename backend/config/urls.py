@@ -45,6 +45,7 @@ if settings.DEBUG or os.environ.get("STANDALONE", False):
         )
     )
 
+
 urlpatterns += [
     path("admin/", admin.site.urls),
     path("api-auth/", include("rest_framework.urls")),
@@ -63,3 +64,6 @@ urlpatterns += [
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     re_path("", TemplateView.as_view(template_name="index.html")),
 ]
+
+urlpatterns = [re_path('^doccano/', include(urlpatterns))]
+
